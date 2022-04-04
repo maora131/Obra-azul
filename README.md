@@ -1,2 +1,2 @@
-# Obra azul
- Cambio de color y estilos
+## Notas e consideracións
+* Segunda versión da aplicación do SOL.

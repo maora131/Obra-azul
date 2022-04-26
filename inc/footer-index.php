@@ -1,14 +1,22 @@
-<!-- Footer específico para inicio -->
-<div class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-  <a href="/" class="d-flex mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-    <svg class="bi" width="30" height="24">
-      <use xlink:href="#bootstrap" />
-    </svg>
-    <span class="text-black mt-2">&copy; 2022 Servizo de Orientación Laboral</span>
-  </a>
-  <ul class="nav col-md-4 d-flex justify-content-end list-unstyled">
-    <li class="ms-3">
-      <a class="text-muted" href="https://hoxe.vigo.org/movemonos/empregolocal.php?lang=gal#/"><img class="bi" height="32" src="./assets/img/conceemprego2.png" alt="Concellería de Emprego de Vigo"></a>
-    </li>
-  </ul>
-</div>
+<!-- FOOTER DO INDEX DE ZIMBRA -->
+
+<footer class="container-fluid py-3">
+  <hr>
+  <div class="row align-middle px-2">
+    <div class="col-md-6 text-center text-md-start">
+      <span class="text-info text-black">&copy; 2022 Servizo de Orientación Laboral</span>
+    </div>
+    <div class="col-md-6 text-center text-md-end">
+      <ul class="list-unstyled d-inline-flex">
+        <li class="me-3"><a class="text-muted" href="https://sede.vigo.org/portal-empregado/#/gestionLogin"><img src="../assets/img/portal.png" width="35" alt="Portal do empregado"></a></li>
+        <li><a class="text-muted" href="https://hoxe.vigo.org/"><img src="../assets/img/conceemprego2.png" width="160" alt="Cocello de Vigo - Concellalía de Emprego"></a></li>
+         </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/jquery-3.6.0.js"></script>
+
+</body>
+</htlm>

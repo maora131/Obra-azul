@@ -1,11 +1,14 @@
-// Toggle global options
+// ----------------------------------FONTES DO ENCABEZADO E CONTIDOS-------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&family=Montserrat&display=swap');
+
+// Opcións globais
 $enable-gradients: true;
 $enable-shadows: true;
 
 $offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
 
-// Customize some defaults
-// -------------------------COLORES PALETA SASS----------------------------------------------
+// Customización
+// -------------------------PALETA DE CORES SASS----------------------------------------------
 $primary:#5694DB;
 $secondary:#f7d559;
 $body-color: #333;
@@ -14,11 +17,10 @@ $body-bg: #fff;
 $success: #7952b3;
 $light: #5A7E99;
 // -------------------------FIN COLORES PALETA SASS----------------------------------------------
-// amarillo pollo:#ffc300
 $border-radius:0rem;
-//  $baseBorderRadius:0;
 
-// Required
+
+// Requerido
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
@@ -41,8 +43,8 @@ $border-radius:0rem;
 @import "bootstrap/scss/card";
 @import "bootstrap/scss/breadcrumb";
 // @import "bootstrap/scss/accordion";
-// @import "bootstrap/scss/pagination";
-// @import "bootstrap/scss/badge";
+@import "bootstrap/scss/pagination";
+@import "bootstrap/scss/badge";
 // @import "bootstrap/scss/alert";
 // @import "bootstrap/scss/progress";
 @import "bootstrap/scss/list-group";
@@ -64,21 +66,19 @@ $border-radius:0rem;
 
 
 //
-// Custom styles
+// Customización dos estilos
 //
 
 @import "icon-list";
 
 
 
-// Style Bootstrap icons
+//  Estilo dos iconos de Bootstrap
 .bi {
   fill: currentColor;
 }
 
-// ----------------------------------FUENTES ENCABEZADO Y CONTENIDOS-------------------------------------
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&family=Montserrat&display=swap');
-
+// --------------------------------FONTES XENÉRICAS----------------------------
 * {
   font-family: 'Montserrat', sans-serif;
 }
@@ -88,7 +88,7 @@ h2 {
   font-family: 'Libre Franklin', sans-serif;
 }
 
-// ----------------------------------FIN FUENTES ENCABEZADO Y CONTENIDOS-------------------------------------
+// ----------------------------------FIN FONTES DO ENCABEZADO E CONTIDOS-------------------------------------
 
 // -----------------------------------FORMULARIO LOGIN----------------------------------------------------------
 .form-signin {
@@ -99,7 +99,7 @@ h2 {
   margin: auto;
   margin-top: 5%;
 }
-// ESTO QUEDA PENDIENTE-------------------------------------
+
 .form-floating {
   margin-top: 1.5625rem;
   width: 21.875rem;
@@ -124,9 +124,6 @@ h2 {
 .form-signin input[type="password"] {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-
-
-
 }
 
 #login-container {
@@ -138,7 +135,6 @@ h2 {
 // ----------------------------------------FIN FORMULARIO LOGIN--------------------------------------------------
 
 
-
 // -----------------------------------------HEADER LOGIN---------------------------------------------------------
 
 .navbar {
@@ -146,16 +142,31 @@ h2 {
 }
 
 // -----------------------------------------FIN HEADER LOGIN---------------------------------------------------------
+// -----------------------------------------MENÚ HAMBURGUESA--------------------------------------------------------
+.navbar-expand-lg {
+  height: 5%;
+  padding-bottom: 2%;
+  z-index: 5;
+}
+.container-fluid02 {
+  z-index: 5;
+  width: 100%;
+  padding: 1%;
+}
+// ICONO HAMBURGUESA
+.navbar-dark .navbar-toggler {
+  border: 0;
+  float: right;
+}
+// ----------------------------------------- PECHE MENÚ HAMBURGUESA--------------------------------------------------------
 
 
+// ----------------------------------------- NOSAS FICHAS TABS/COMÚN A PERSOAS E EMPRESAS---------------------------------
 
-
-// -----------------------------------------PESTAÑAS TABS/COMÚN A PERSOAS Y EMPRESAS---------------------------------
-
-/* CLASES DE LA ESTRUCTURA DE PESTAÑAS, DEBEN MANTENERSE
+/* CLASES DA ESTRUCTURA DAS FICHAS, DEBEN MANTERSE
 t-container = caja div -> ESTILO MODIFICABLE
-t-tabs y t-contents = lista ul -> COMPROBAR SI SE PUEDE
-t-tab y t-content = elementos li -> NECESARIOS PARA EL JS */
+t-tabs y t-contents = lista ul -> COMPROBAR SE SE PODE
+t-tab y t-content = elementos li -> NECESARIOS PARA O JS */
 
 .t-container {
   margin: .625rem auto;
@@ -176,7 +187,6 @@ t-tab y t-content = elementos li -> NECESARIOS PARA EL JS */
 }
 
 .t-tabs li {
-
   color: #fffefe;
   padding: 0.5em 0.7em;
   text-decoration: none;
@@ -195,7 +205,6 @@ t-tab y t-content = elementos li -> NECESARIOS PARA EL JS */
 
 .t-tabs li:hover {
   background-color: $secondary;
-
 }
 
 .t-tabs li.selected {
@@ -208,7 +217,6 @@ t-tab y t-content = elementos li -> NECESARIOS PARA EL JS */
 }
 
 .t-content {
-
   padding-left: 2%;
   padding-right: 2%;
   background-color: #c1d8f0;
@@ -229,6 +237,41 @@ t-tab y t-content = elementos li -> NECESARIOS PARA EL JS */
   transition: max-height 1.25s ease 0.5s;
 }
 
+//
+// TABS CON BOOTSTRAP
+//
+
+.nav-tabs {
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+  background-color: #efefef;
+
+  .nav-link {
+    margin-bottom: -$nav-tabs-border-width;
+    background: none;
+    border: $nav-tabs-border-width solid transparent;
+    @include border-top-radius($nav-tabs-border-radius);
+
+    &:hover,
+    &:focus {
+      border-color: $nav-tabs-link-hover-border-color;
+      background-color: $secondary;
+      // Prevents active .nav-link tab overlapping focus outline of previous/next .nav-link
+      isolation: isolate;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $nav-tabs-link-active-color;
+    background-color: rgba(86,148,219,0.6);
+    border-color: $nav-tabs-link-active-border-color;
+  }
+}
+
+.tab-content>.tab-pane.active{
+  background-color: rgba(86,148,219,0.3);
+}
+
 /* AÑADIDO POR VER */
 .t-content p {
   margin-top: 1.5625rem;
@@ -246,9 +289,9 @@ select[option] {
   font-style: italic;
 }
 
-// ----------------------------------------- FIN PESTAÑAS TABS/COMÚN A PERSOAS Y EMPRESAS---------------------------------
+// ----------------------------------------- FIN FICHAS TABS/COMÚN A PERSOAS E EMPRESAS---------------------------------
 
-// ------------------------------------------ PAGINACION DE LAS TABLAS PERSOAS EMPRESAS------------------------------------------
+// ------------------------------------------ PAXINACIÓN DAS TÁBOAS PERSOAS EMPRESAS------------------------------------------
 .pagination {
   list-style-type: none;
   padding: .625rem 0;
@@ -284,14 +327,12 @@ select[option] {
 }
 
 .pagination .currentpage a {
-  // background-color: #518acb;
   background-color: $primary;
   color: #fff;
 }
 
 .pagination .currentpage a:hover {
-
   background-color: rgb(78, 157, 248);
 }
 
-// ------------------------------------------ FIN PAGINACION DE LAS TABLAS PERSOAS EMPRESAS------------------------------------------
+// ------------------------------------------ FIN PAXINACIÓN DAS TÁBOAS PERSOAS EMPRESAS------------------------------------------

@@ -8,16 +8,15 @@ $sql = "DELETE FROM persoas WHERE id = '$id'";
 $resultado = $mysqli->query($sql);
 ?>
 
-<html lang="gl">
-
+<!DOCTYPE html>
+<html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/assets/css/index.css">
-
-</head>
-<!-- Caja mensaje -->
+  <title>Rexistro eliminado</title>
+  <link rel="stylesheet" href="../../assets/css/index.css">
+  </head>
+<!-- CAIXA MENSAXE -->
 <body>
-  <div class="modal modal-sheet position-static d-block bg-secondary d-flex align-items-center" tabindex="-1" role="dialog" id="modalSheet">
+  <div class="modal modal-sheet d-block bg-light d-flex align-items-center" tabindex="-1" role="dialog" id="modalSheet">
     <div class="modal-dialog" role="document">
       <div class="modal-content rounded-6 shadow">
         <div class="modal-header border-bottom-0">
@@ -35,7 +34,7 @@ $resultado = $mysqli->query($sql);
         </div>
         <div class="modal-footer flex-column border-top-0">
 
-          <a href="../index.php" class="btn btn-lg btn-outline-success w-50 mx-0 mb-5 mt-4">VOLTAR</a>
+          <a href="../index.php" class="btn btn-lg btn-secondary w-50 mx-0 mb-5 mt-4">VOLTAR</a>
 
         </div>
       </div>

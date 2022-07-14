@@ -1,5 +1,5 @@
 ## Notas e consideracións
-* Última versión da aplicación do SOL.
+* Última versión da aplicación do SOL. Versión azul
 ![image](https://user-images.githubusercontent.com/91051075/165263138-54dc432a-9424-4dab-bfcf-042bf3f16e19.png)
 ![image](https://user-images.githubusercontent.com/91051075/165263264-5af0c3d1-b56b-452c-9852-cb536724a95d.png)
 ![image](https://user-images.githubusercontent.com/91051075/165263322-dad00df2-54f8-4698-adef-ee3c478277ef.png)
